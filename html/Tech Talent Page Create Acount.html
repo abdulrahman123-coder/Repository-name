@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/Tech Talent Page Create Acount.css">
+  <title>Tech Talent Page Create Acount</title>
+</head>
+<body dir="rtl">    
+    <!-- Start Step -->
+    <div class="stepper">
+        <div class="step active" id="moveStep1">
+            <div class="circle">1</div>
+            <div>بيانات الشخصية</div>
+        </div>
+        <div class="step" id="moveStep2">
+            <div class="circle">2</div>
+            <div>بيانات الأساسية</div>
+        </div>
+        <div class="step" id="moveStep3">
+            <div class="circle">3</div>
+            <div>بيانات العمل</div>
+        </div>
+        <div class="step" id="moveStep4">
+            <div class="circle">4</div>
+            <div>الشروط والاحكام</div>
+        </div>
+    </div>
+    <!-- End Step -->
+
+    <!-- Start Container -->
+       <div class="container">
+       <!-- Start Step One -->
+       <div id="step1">
+
+        <h1 class="text">بيانات الشخصية</h1>
+
+        <form id="step1Form">
+
+            <label for="name" class="lab">الاسم</label>
+            <input type="text" id="name" placeholder="برجاء ادخال الاسم بل كامل"  class = "inp" required >
+            
+            <label for="age" class="lab">السن</label>
+            <input type="number" id="age" min="1" placeholder="برجاء ادخال السن"  class = "inp"  required>
+
+                <label for="phone">رقم الهاتف</label>
+                 <input type="tel" id="phone" class="form-control" placeholder="أدخل رقم الهاتف" maxlength="11">
+            
+            <label for="email"  class="lab">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="البريد الإلكتروني"  class="inp" required> 
+
+            <label for="password" class="lab">كلمة المرور</label>
+            <input type="password" id="password" maxlength="8" placeholder="برجاء ادخال كلمه المرور"  class = "inp" required>
+
+            <label for="confirm_password" class="lab">تأكيد كلمة المرور</label>
+            <input type="password" id="confirm_password" maxlength="8" placeholder="برجاء تأكيد كلمة المرور" class="inp" required>
+            <p id="password_error" style="color: red; font-size: 10px; display: none;">كلمة المرور غير متطابقة</p>
+
+
+            <label for="photo" class="lab">الصورة الشخصية</label>
+            <input type="file" id="photo" class="inp" ccept="image/*" required>               
+                        
+            <button  type="button"  class="btn"  onclick="nextStep(1)">استمرار</button>
+
+            <div class="links">
+                <p>لديك حساب بل فعل ؟<a href="../html/Tech Talent Page Login.html">اضغط هنا</a></p>
+            </div>
+
+        </form>
+
+        </div>
+        <!-- End Step One -->
+
+
+        
+        <!-- Start Step Tow -->
+        <div id="step2"  class="hidden">
+
+            <h1 class="text">بيانات اساسيه</h1>
+
+            <form id="step2Form">
+ 
+                <label for="gender" class="lab">النوع</label>
+                <select id="gender"  class="inp" required>
+                    <option value="">اختار النوع</option>
+                    <option value="ذكر">ذكر</option>
+                    <option value="انثي">انثي</option>
+                </select>
+    
+                <label for="job" class="lab">المسمي الوظيفي</label>
+                <select id="job"  class="inp" required>
+                    <option value="">اخترالمسمي الوظيفي</option>
+                    <option value="صيانه حاسب"> صيانه حاسب</option>
+                    <option value="برامج حاسب"> برامج حاسب</option>
+                    <option value="جريفك"> جريفك</option>
+                    <option value="معدات كهربيه"> معدات كهربيه</option>
+                    <option value="معدات الكترونيه"> معدات الكترونيه</option>
+                    <option value="توصيلات كهربيه"> توصيلات كهربيه</option>
+                    <option value="تبريد و تكيف"> تبريد و تكيف</option>
+                    <option value="هيدرولك">هيدرولك</option>
+                    <option value="CNC">CNC</option>
+                    <option value="ميكاترونيكس">ميكاترونيكس</option>
+                    <option value="كيمياء صناعيه">كيمياء صناعيه</option>
+                    <option value="كيمياء تحليليه">كيمياء تحليليه</option>
+                </select>
+
+                <label for="about"  class="lab">تكلم عن نفسك</label>
+                <textarea  placeholder="تكلم عن نفسك"  class="inp"  id="about" required></textarea> 
+
+                <label for="education" class="lab">المستوى التعليمي</label>
+                <select id="education" class="inp" required>
+                    <option value="">اختر المستوى التعليمي</option>
+                    <option value="دبلوم المدارس الثانوية الصناعية - 3 سنوات">دبلوم المدارس الثانوية الصناعية (3 سنوات)</option>
+                    <option value="دبلوم المدارس الثانوية الصناعية - 5 سنوات">دبلوم المدارس الثانوية الصناعية (5 سنوات)</option>
+                    <option value="المعهد الفني الصناعي">المعهد الفني الصناعي</option>
+                    <option value="كلية التعليم الصناعي">كلية التعليم الصناعي</option>
+                </select>                
+
+                <label for="experience" class="lab">مستوى الخبرة</label>
+                <select id="experience"  class="inp" required>
+                    <option value="">اختر مستوى الخبرة</option>
+                    <option value="حديث التخرج">حديث التخرج</option>
+                    <option value="خبرة 3 سنوات">خبرة 3 سنوات</option>
+                    <option value="خبرة 5 سنوات">خبرة 5 سنوات</option>
+                    <option value="خبرة من 5 إلى 10 سنوات">خبرة من 5 إلى 10 سنوات</option>
+                    <option value="خبرة أكثر من 10 سنوات">خبرة أكثر من 10 سنوات</option>
+                </select>
+                
+                <label for="state" class="lab">المحافظة</label>
+                <select id="state" class="inp" required>
+                    <option value="" >اختر المحافظة</option>
+                </select>
+                
+                <label for="city" class="lab">المركز</label>
+                <select id="city"  class="inp" required>
+                    <option value="">اختر المركز</option>
+                </select>
+                
+                <button  type="button"  class="btn"  onclick="nextStep(2)">استمرار</button>
+
+            </form>
+    
+        </div>
+        <!-- End Step Tow -->
+
+
+        <!-- Start Step Three -->
+         <div id="step3"  class="hidden">
+
+            <h1 class="text">بيانات العمل</h1>
+
+            <form id="step3Form">                
+                <label for="shiftOption" class="lab">هل تقبل العمل في ورديات؟</label>
+                    <input type="radio" id="shiftOption-yes" name="shifts" value="yes" onclick="menuSelect(true)" required> <label for="shiftOption-yes">نعم</label>
+                    <input type="radio" id="shiftOption-no" name="shifts" value="no" onclick="menuSelect(false)" required> <label for="shiftOption-no">لا</label>
+                <select id="shiftOptions" style="display: none;"  class="inp">
+                    <option value="">اختر الوردية</option>
+                    <option value="وردية صباحية">وردية صباحية</option>
+                    <option value="وردية مسائية">وردية مسائية</option>
+                    <option value="وردية مختلطة">وردية مختلطة</option>
+                </select>
+                
+
+                
+                <label for="healthDetail" class="lab">هل لديك مشكلة صحية؟</label>
+                    <input type="radio" id="healthDetail-yes" name="health" value="yes" onclick="menuHealthSelect(true)" required> <label for="healthDetail-yes">نعم</label>
+                    <input type="radio" id="healthDetail-no" name="health" value="no" onclick="menuHealthSelect(false)" required> <label for="healthDetail-yes">لا</label>
+                <select id="healthDetails" style="display: none;"  class="inp">
+                    <option value="">اختر نوع المشكلة الصحية</option>
+                    <option value="أمراض القلب">أمراض القلب</option>
+                    <option value="مرض السكري">مرض السكري</option>
+                    <option value="ارتفاع ضغط الدم">ارتفاع ضغط الدم</option>
+                    <option value="انخفاض ضغط الدم">انخفاض ضغط الدم</option>
+                    <option value="الربو">الربو</option>
+                    <option value="أمراض الكلى">أمراض الكلى</option>
+                    <option value="أمراض الكبد">أمراض الكبد</option>
+                    <option value="اضطرابات الغدة الدرقية">اضطرابات الغدة الدرقية</option>
+                    <option value="الأورام السرطانية">الأورام السرطانية</option>
+                    <option value="التهاب المفاصل">التهاب المفاصل</option>
+                    <option value="فقر الدم (الأنيميا)">فقر الدم (الأنيميا)</option>
+                    <option value="الصداع النصفي">الصداع النصفي</option>
+                    <option value="مشاكل الجهاز الهضمي المزمنة">مشاكل الجهاز الهضمي المزمنة</option>
+                    <option value="اضطرابات نفسية مزمنة">اضطرابات نفسية مزمنة</option>
+                    <option value="أمراض الجهاز العصبي">أمراض الجهاز العصبي</option>
+                    <option value="اضطرابات المناعة الذاتية">اضطرابات المناعة الذاتية</option>
+                    <option value="أمراض الجهاز التنفسي المزمنة">أمراض الجهاز التنفسي المزمنة</option>
+                    <option value="أمراض جلدية مزمنة">أمراض جلدية مزمنة</option>
+                    <option value="مشاكل العيون المزمنة">مشاكل العيون المزمنة</option>
+                </select>
+                
+                 <label for="salarymonth" class="lab">الرتب المتوقع خلال الشهر</label>
+                 <select id="salarymonth"  class="inp" required>
+                     <option value="">الرتب الشهري</option>
+                     <option value="من 1000 إلى 3000 جنيه">من 1000 إلى 3000 جنيه</option>
+                     <option value="من 3000 إلى 5000 جنيه">من 3000 إلى 5000 جنيه</option>
+                     <option value="من 5000 إلى 7000 جنيه">من 5000 إلى 7000 جنيه</option>
+                     <option value="من 7000 إلى 10000 جنيه">من 7000 إلى 10000 جنيه</option>
+                 </select>
+
+                 <label for="salaryday" class="lab">الرتب المتوقع خلال اليوم</label>
+                 <select id="salaryday"  class="inp" required>
+                     <option value="">الرتب اليومي</option>
+                     <option value="من 50 إلى 100 جنيه">من 50 إلى 100 جنيه</option>
+                     <option value="من 150 إلى 200 جنيه">من 150 إلى 200 جنيه</option>
+                     <option value="من 250 إلى 300 جنيه">من 250 إلى 300 جنيه</option>
+                     <option value="من 350 إلى 400 جنيه">من 350 إلى 400 جنيه</option>
+                     <option value="من 450 إلى 500 جنيه">من 450 إلى 500 جنيه</option>
+                     <option value="من 550 إلى 600 جنيه">من 550 إلى 600 جنيه</option>
+                 </select>
+
+                 <button  type="button"  class="btn"  onclick="nextStep(3)">استمرار</button>
+
+            </form>
+
+         </div>
+        <!-- End Step Three -->
+
+
+       <!-- Start Step Accept Step4 -->
+        <div id="step4" class="hidden">
+
+    <h1 class="text">الشروط و الاحكام</h1>
+
+    <form id="step4Form">
+
+        <ul class="Acept">
+            <li>يجب أن يكون عمر المستخدم 18 عامًا أو أكثر.</li>
+            <li>لا يجوز استخدام الموقع لأي أنشطة غير قانونية.</li>
+            <li>يجب على المستخدم تقديم معلومات صحيحة ودقيقة عند التسجيل.</li>
+            <li>إدارة الموقع لها الحق في تعديل الشروط والأحكام في أي وقت.</li>
+            <li>جميع البيانات الشخصية المقدمة ستظل سرية ولن يتم مشاركتها مع أطراف ثالثة.</li>
+            <li>يوافق المستخدم على الامتثال لجميع القوانين واللوائح المعمول بها.</li>
+            <li>الموقع غير مسؤول عن أي خسائر ناتجة عن سوء الاستخدام.</li>
+            <li>يجب على المستخدم احترام حقوق الملكية الفكرية وعدم انتهاكها.</li>
+        </ul>
+            <input type="checkbox" id="cheked" required>
+            <label for="cheked">أوافق على الشروط والأحكام</label>
+        <button type="submit"  class="btn"  id="submitBtn" onclick="saveData()" style="display: none;">تسجيل</button>
+
+    </form>
+        </div>
+        <!-- End Step Accept Step4 -->
+
+      </div>
+    <!-- End Create Account -->
+
+    <!-- Links JS -->
+    <script src="../js//Tech Talent Page Create Acount.js"></script>
+</body>
+</html>

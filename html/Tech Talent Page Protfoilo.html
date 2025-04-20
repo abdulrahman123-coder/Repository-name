@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Tech Talent Page Protfolio.css">
+    <title>Tech Talent Page Portfolio</title>
+</head>
+<body dir="rtl">    
+
+    <div class="container">
+        
+        <div class="Coulm-Right">
+
+            <div class="img-container">
+                <img id="photo" class="img"  accept="image/*" alt="صورة المستخدم">
+            </div>
+            <div class="box2">
+            <p><strong class="Stro">الاسم : </strong> <span  id="userName" class="span"></span></p>
+            <p><strong class="Stro">العمر : </strong> <span id="userAge" class="span"></span></p>
+            <p><strong class="Stro">النوع : </strong> <span  id="userGender" class="span"></span></p>
+            <p><strong class="Stro">التخصص : </strong> <span  id="userJob" class="span"></span></p>
+        </div>
+
+    
+        <div class="box2">
+            <h3>عني</h3>
+            <div id="userAbout"  class="box3"></div>
+        </div>
+
+        <div>
+            <button type="submit" class="btn technician-only" id="editButton" >تعديل</button>
+            <button type="submit" class="btn" id="saveButton" style="display: none;">حفظ التعديلات</button>
+            <button type="submit" class="btn" id="cancelButton" style="display: none;">الغاء</button>
+        </div>
+
+        
+
+        </div>
+
+        <div class="Coulm-Center">
+            <h3>بيانات التواصل</h3>
+            <div class="box">
+                <p><strong class="Stro">الرقم : </strong> <span   id="userPhone" class="span"></span></p>
+                <p><strong class="Stro">البريد الالكتروني : </strong> <span  id="userEmail" class="span"></span></p>        
+                <p><strong class="Stro">المحافظة : </strong> <span  id="userCity" class="span"></span></p>        
+                <p><strong class="Stro">المركز : </strong> <span  id="userArea" class="span"></span></p>        
+            </div>
+
+            <h3>بيانات العمل</h3>
+            <div class="box">
+                <p><strong class="Stro">المستوى التعليمي : </strong><span  id="userEducation" class="span"></span></p>
+                <p><strong class="Stro">مستوى الخبرة : </strong><span  id="userExperience" class="span"></span></p>
+                <p><strong class="Stro"> الوردية : </strong><span  id="usershiftOptions" class="span"></span></p>
+            </div>
+
+            <!-- <h3>الإحصائيات</h3>
+            <div class="box">
+                <p><strong class="Stro">عدد المشاريع : </strong><span id="projectsCount" class="span"></span></p>
+                <p><strong class="Stro">العملاء السعداء : </strong><span id="happyClients" class="span"></span></p>
+                <p><strong class="Stro">نسبة التقييمات : </strong><span id="ratingPercentage" class="span"></span></p>
+            </div> -->
+
+            <div class="notifications-section technician-only">
+                <div class="notifications-header">
+                    <h3>الإشعارات</h3>
+                </div>
+                <div id="notificationBox" class="notification-list"></div>
+            </div>
+
+            </div>
+            
+        </div>
+
+        </div>
+
+        <div class="Coulm-left">
+            
+            <div class="box">
+                <h3>صور أعمال سابقة</h3>
+                <div class="add-image">
+                    <input type="file" id="workImage" placeholder="أدخل رابط الصورة"  class="inp-img technician-only">
+                    <button type="submit" class="btn technician-only"  id="btn-img" onclick="saveWorkImage()">حفظ الصوره</button>
+                </div>
+                <div class="pro-img Scroll-box" id="workImageGallery"></div>
+            </div>
+
+            <div class="box">
+                <h3>صور شهادات</h3>
+                <div class="add-image">
+                    <input type="file" id="certificateImage" placeholder="أدخل رابط الصورة"  class="inp-img technician-only">
+                    <button type="submit" class="btn technician-only" id="btn-img" onclick="saveCertificateImage()">حفظ الصوره</button>
+                </div>
+                <div class="pro-img Scroll-box" id="certificateImageGallery"></div>
+            </div>
+
+            <div class="box">
+            <h3>التعليقات</h3>
+            <div class="Scroll-box">
+                <div class="Scroll-content" id="ratings-container"></div>
+            </div> 
+        </div> 
+<!-- 
+<div class="notifications-section technician-only">
+    <div class="notifications-header">
+        <h3>الإشعارات</h3>
+    </div>
+    <div id="notificationBox" class="notification-list"></div>
+</div> -->
+
+        </div>
+
+    </div>
+
+    <script src="../js/Tech Talent Page Protfoilo.js"></script>
+    <script src="../js/Tech Talent Page Cards.js"></script>
+</body>
+</html>
+
+
+
+

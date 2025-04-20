@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 30px;
+} 
+html{
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.column {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color:#0a395bcb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+h2{
+    margin-bottom: 10px;
+    color: #0a395b;
+}
+
+button:hover {
+    background-color:   #0a395b;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+p.p_dash{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+span{
+    margin-bottom: 10px;
+}
+
+select {
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* جعل التصميم متجاوبًا */
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+}
+/* تنسيق قسم الإشعارات */
+.notifications-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* تنسيق زر مسح كل الإشعارات */
+button[onclick="clearNotifications()"] {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+button[onclick="clearNotifications()"]:hover {
+    background-color: #e60000;
+}
+
+/* تنسيق الإشعار */
+.notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* ألوان الإشعارات بناءً على النوع */
+.notification.success {
+    background-color: #e6f4ea;
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.notification.error {
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+
+.notification.info {
+    background-color: #d1ecf1;
+    border: 1px solid #17a2b8;
+    color: #17a2b8;
+}
+
+/* تنسيق الأزرار داخل الإشعار */
+.notification button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s;
+}
+
+/* زر القبول */
+.notification button[onclick*="accepted"] {
+    background-color: #28a745;
+    color: white;
+    margin-left: 5px;
+}
+
+.notification button[onclick*="accepted"]:hover {
+    background-color: #218838;
+}
+
+/* زر الرفض */
+.notification button[onclick*="rejected"] {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 5px;
+}
+
+.notification button[onclick*="rejected"]:hover {
+    background-color: #c82333;
+}
+
+/* زر الحذف */
+.notification button[onclick*="deleteNotification"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.notification button[onclick*="deleteNotification"]:hover {
+    background-color: #5a6268;
+}
+
+/* تنسيق النص داخل الإشعار */
+.notification p {
+    margin: 0;
+    flex-grow: 1;
+}

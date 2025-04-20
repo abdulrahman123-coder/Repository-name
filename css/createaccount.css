@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+/* إعدادات عامة للصفحة */
+body {
+font-family: 'Tajawal', Arial, sans-serif; /* استخدام خط عربي احترافي */
+direction: rtl; /* دعم اللغة العربية */
+text-align: center; /* محاذاة النصوص */
+background-color: rgb(217, 231, 239); /* لون خلفية أنيق */
+margin: 0; /* إزالة الهوامش الافتراضية */
+min-height: 100vh; /* ضمان امتداد الخلفية */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* الحاوية الرئيسية */
+.container {
+width: 90%; /* عرض متجاوب */
+max-width: 500px; /* الحد الأقصى للعرض */
+margin: 20px auto; /* هامش متجاوب */
+background: white;
+padding: 25px; /* زيادة الحشوة للراحة */
+border-radius: 12px; /* زوايا دائرية أكثر نعومة */
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+transition: transform 0.3s ease; /* تأثير حركة عند التفاعل */
+}
+
+.container:hover {
+transform: translateY(-5px); /* تأثير رفع عند التمرير */
+}
+
+/* تنسيق عناصر الإدخال */
+input, select, textarea {
+width: 100%;
+padding: 12px; /* حشوة مريحة */
+margin: 8px 0; /* تباعد مناسب */
+border: 1px solid #ddd; /* حدود خفيفة */
+border-radius: 20px;
+font-size: 16px; /* حجم خط مناسب */
+box-sizing: border-box; /* ضمان احتساب الحشوة ضمن العرض */
+transition: border-color 0.3s ease; /* تأثير عند التفاعل */
+}
+
+input:focus, select:focus, textarea:focus {
+border-color: #28a745; /* لون عند التركيز */
+outline: none; /* إزالة الإطار الافتراضي */
+box-shadow: 0 0 5px rgba(40, 167, 69, 0.3); /* تأثير توهج */
+}
+
+/* تنسيق الزر */
+button {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+background: linear-gradient(135deg, #28a745, #218838); /* تدرج لوني */
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+font-weight: bold; /* خط عريض للزر */
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+background: linear-gradient(135deg, #218838, #1e7e34); /* تدرج داكن عند التمرير */
+transform: scale(1.02); /* تكبير طفيف */
+}
+
+button:active {
+transform: scale(0.98); /* تصغير عند النقر */
+}
+
+/* تنسيق رسالة الخطأ */
+.error-message {
+color: #dc3545; /* لون أحمر جذاب */
+font-size: 13px;
+text-align: right;
+margin: 5px 0;
+display: none; /* مخفية افتراضيًا */
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 600px) {
+.container {
+    width: 95%; /* عرض أكبر للشاشات الصغيرة */
+    padding: 15px; /* تقليل الحشوة */
+}
+
+input, select, textarea, button {
+    font-size: 14px; /* تصغير الخط قليلاً */
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+}
+}
+
+/* دعم الشاشات الكبيرة */
+@media (min-width: 1200px) {
+.container {
+    max-width: 600px; /* عرض أكبر للشاشات الكبيرة */
+}
+}

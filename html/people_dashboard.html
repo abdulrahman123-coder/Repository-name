@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/people.dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <title>لوحة التحكم</title>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!--  بيانات المستخدم -->
+        <div class="profile-info column" >
+            <h2> البيانات الشخصيه </h2>
+            <p  class="p_dash" ><strong>الاسم:</strong> 
+                <span id="userName"></span>
+                <input type="text" id="editUserName" class="no_style" style="display:none;">
+            </p>
+            <p class="p_dash"><strong>البريد الإلكتروني:</strong> 
+                <span id="userEmail"></span>
+                <input type="email" id="editUserEmail" class="no_style" style="display:none;">
+            </p>
+            <p  class="p_dash"><strong>المحافظة:</strong> 
+                <span id="userState"></span>
+                <input type="text" id="editUserState" class="no_style" style="display:none;">
+            </p>
+            <p  class="p_dash"><strong>المركز:</strong> 
+                <span id="userCity"></span>
+                <input type="text" id="editUserCity" class="no_style" style="display:none;">
+            </p>
+            <p  class="p_dash"><strong>رقم الهاتف:</strong>
+                <span id="phone"></span>
+                <input type="text" id="editPhone" class="no_style" style="display:none;">
+            </p  class="p_dash">
+
+            <p id="error" style="color:red; margin:10px 0; "></p>
+            <div class="buttons">
+                <button id="editBtn">تعديل</button>
+                <button id="saveBtn">حفظ</button>
+                <a href="indx.html">
+                    <button class="home-btn">الرجوع إلى الصفحة الرئيسية</button>
+                </a>
+            </div>
+        </div>
+        <!--  إضافة إعلان -->
+        <div class="column add-column">
+            <h2>إضافة إعلان</h2>
+            <form id="requestForm">
+                <label for="maj">التخصص المطلوب</label>
+                <select name="majer" id="maj">
+                    <option value="صيانة حاسب">صيانة حاسب</option>
+                    <option value="برامج حاسب">برامج حاسب</option>
+                    <option value="جرافيك">جرافيك</option>
+                    <option value="معدات كهربائية">معدات كهربائية</option>
+                    <option value="معدات إلكترونية">معدات إلكترونية</option>
+                    <option value="توصيلات كهربائية">توصيلات كهربائية</option>
+                    <option value="تبريد وتكييف">تبريد وتكييف</option>
+                    <option value="هيدروليك">هيدروليك</option>
+                    <option value="CNC">CNC</option>
+                    <option value="ميكاترونيكس">ميكاترونيكس</option>
+                    <option value="كيمياء صناعية">كيمياء صناعية</option>
+                    <option value="كيمياء تحليلية">كيمياء تحليلية</option>
+                </select>
+    
+                <label for="text">الطلب</label>
+                <textarea name="text" id="text" maxlength="100"></textarea>
+    
+                <label for="datetime">اختر التاريخ والوقت:</label>
+                <input type="text" id="datetime" name="datetime" placeholder="اختر التاريخ والوقت">
+    
+                <label for="location">العنوان</label>
+                <input type="text" id="location" name="location"  maxlength="50">
+                <div id="alertMessage" style="display: none; padding: 10px; margin-top: 10px; border-radius: 5px; text-align: center;"></div>
+
+                <button type="submit">إرسال الطلب</button>
+            </form>
+        </div>
+        <!--  الإشعارات -->
+        <div class="column notifications-column">
+            <h2>الإشعارات</h2>
+            <button onclick="clearNotifications()">مسح كل الإشعارات</button>
+            <div id="notifications">
+                <p>لا توجد إشعارات جديدة</p>
+            </div>
+        </div>
+        </div>
+    </div>
+        </div>
+        <!-- استدعاء calender -->
+    <script>
+        flatpickr("#datetime", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            time_24hr: true
+        });
+    </script>
+
+    <script src="../js/people.dashboard.js"  defer></script> 
+
+</body>
+</html>

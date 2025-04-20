@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Links Style -->
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/Tech Talent Page Login.css">
+  <title>Tech Talent Page Login</title>
+</head>
+<body dir="rtl">    
+  <!-- Start Container -->
+  <div class="container">
+    <div class="image-container">
+        <img src="../img/w1 (2).png" alt="Connect Platform Logo">
+    </div>
+<div class="form-container">
+    <h1 class="text">تسجيل الدخول الي حسابك</h1>
+      <form action="">
+          <!-- <label for="mail"  class="lab">البريد الإلكتروني</label> -->
+          <input type="email" id="mail" class="inp" placeholder="البريد الإلكتروني" required >
+          <!-- <label for="password" class="lab">كلمة المرور</label> -->
+          <input type="password" id="password"  class="inp" maxlength="8"  placeholder="كلمة المرور"  required>
+          <div class="forgot-password">
+              <a href="#" id="forgot-password-link">نسيت كلمة السر؟</a>
+          </div>
+          <button type="submit" class="btn">تسجيل الدخول</button>
+      </form>
+      <div class="links">
+          <p>ليس لديك حساب؟ <a href="../html/Tech Talent Page Create Acount.html">إنشاء حساب جديد</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- End Container -->
+
+  <!-- Start Pop-UP Windo -->
+  <div id="forgot-password-Popup" class="Popup">
+      <div class="Popup-content">
+          <span class="close">&times;</span>
+          <h2>اعاده ضبط كلمه المرور</h2>
+          <label for="email" class="lab-pop" >البريد الإلكتروني</label>
+          <input type="email" id="email" class="inp-pop" placeholder="البريد الإلكتروني" required >
+          <button type="submit" class="btn-pop">ارسال الرمز</button>
+      </div>
+  </div>
+    <!-- End Pop-UP Windo -->
+
+    <!-- Links JS -->
+    <script src="../js/Tech Talent Page Login.js"></script>
+</body>
+</html>

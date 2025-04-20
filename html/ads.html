@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ads.css">
+    <title>إنشاء إعلان جديد</title>
+</head>
+<body>
+    <div class="container">
+        <h1>إنشاء إعلان جديد</h1>
+        <form id="adForm">
+            <div class="form-group">
+                <label for="adTitle">عنوان الإعلان</label>
+                <input type="text" id="adTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adDescription">وصف الإعلان</label>
+                <textarea id="adDescription" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="adCategory">تصنيف الإعلان</label>
+                <select id="adCategory" required>
+                    <option value="" selected disabled>اختر تصنيف الإعلان</option>
+                    <option value="صيانه حاسب">صيانه حاسب</option>
+                    <option value="برامج حاسب">برامج حاسب</option>
+                    <option value="جريفك">جريفك</option>
+                    <option value="معدات كهربيه">معدات كهربيه</option>
+                    <option value="معدات الكترونيه">معدات الكترونيه</option>
+                    <option value="توصيلات كهربيه">توصيلات كهربيه</option>
+                    <option value="تبريد و تكيف">تبريد و تكيف</option>
+                    <option value="هيدرولك">هيدرولك</option>
+                    <option value="CNC">CNC</option>
+                    <option value="ميكاترونيكس">ميكاترونيكس</option>
+                    <option value="كيمياء صناعيه">كيمياء صناعيه</option>
+                    <option value="كيمياء تحليليه">كيمياء تحليليه</option>
+                </select>
+            </div>
+
+            <!-- <div class="form-group">
+                <label>صورة الإعلان</label>
+                <div class="image-options">
+                    <div class="image-option selected" id="useCompanyLogo">
+                        <p>استخدام لوجو الشركة</p>
+                    </div>
+                    <div class="image-option" id="uploadCustomImage">
+                        <p>رفع صورة أخرى</p>
+                    </div>
+                </div>
+                <input type="file" id="adImage" accept="image/*" style="display: none;">
+                <img id="customImagePreview" class="logo-preview" style="display: none;">
+            </div> -->
+
+            <div class="form-group">
+                <label for="adExpiry">تاريخ انتهاء الصلاحية</label>
+                <input type="date" id="adExpiry" required>
+            </div>
+
+            <button type="button" onclick="createAd()">نشر الإعلان</button>
+            <button type="button" class="back-btn" onclick="window.location.href='company.html'">العودة للوحة التحكم</button>
+        </form>
+    </div>
+
+    <script src="../js/ads.js"></script>
+</body>
+</html>

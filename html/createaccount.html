@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/createaccount.css">
+    <title>تسجيل شركة</title>
+</head>
+<body>
+    <div class="container">
+        <h2>تسجيل شركة جديدة</h2>
+        <input type="text" id="company_name" placeholder="اسم الشركة">
+        <small class="error-message" id="error_company_name"></small>
+
+        <input type="file" id="company_logo" accept="image/*">
+        <input type="text" id="company_phone" placeholder="رقم الهاتف" maxlength="11">
+        <small class="error-message" id="error_company_phone"></small>
+
+        <input type="email" id="company_email" placeholder="البريد الإلكتروني">
+        <small class="error-message" id="error_company_email"></small>
+
+        <input type="password" id="company_password" placeholder="كلمة المرور">
+        <input type="password" id="company_confirm_password" placeholder="تأكيد كلمة المرور">
+        <small class="error-message" id="error_company_password"></small>
+
+
+        <select id="state" required class="inp">
+            <option value=""  required>اختر المحافظة</option>
+        </select>
+        
+        <select id="city"  required class="inp">
+            <option value="" required>اختر المركز</option>
+        </select>
+        
+        <textarea id="company_description" placeholder="نبذة عن الشركة"></textarea>
+        <select id="company_field">
+            <option value="" disabled selected>اختر مجال الشركة</option>
+                    <option value="صيانه حاسب"> صيانه حاسب</option>
+                    <option value="برامج حاسب"> برامج حاسب</option>
+                    <option value="جريفك"> جريفك</option>
+                    <option value="معدات كهربيه"> معدات كهربيه</option>
+                    <option value="معدات الكترونيه"> معدات الكترونيه</option>
+                    <option value="توصيلات كهربيه"> توصيلات كهربيه</option>
+                    <option value="تبريد و تكيف"> تبريد و تكيف</option>
+                    <option value="هيدرولك">هيدرولك</option>
+                    <option value="CNC">CNC</option>
+                    <option value="ميكاترونيكس">ميكاترونيكس</option>
+                    <option value="كيمياء صناعيه">كيمياء صناعيه</option>
+                    <option value="كيمياء تحليليه">كيمياء تحليليه</option>
+        </select>
+
+        <textarea id="company_benefits" placeholder="مميزات الشركة"></textarea>
+        
+        <button onclick="signup()">تسجيل</button>
+        <p>لديك حساب بالفعل؟ <a href="../html/login.html">تسجيل الدخول</a></p>
+    </div>
+
+    <script src="../js/createaccount.js"></script>
+</body>
+</html>

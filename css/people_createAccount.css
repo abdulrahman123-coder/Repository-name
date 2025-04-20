@@ -1,0 +1,119 @@
+/* استيراد خط Cairo */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+/* تعريف المتغيرات */
+:root {
+    --primary-color: hwb(0 100% 0%); /* أبيض */
+    --secondary-color: rgb(217, 231, 239); /* لون خلفية فاتح */
+    --text-color: hwb(240 5% 79%); /* لون النص */
+    --hover: #00000000; /* شفاف */
+    --complet-color: #28a745; /* لون الإكمال */
+}
+
+/* إعدادات عامة للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: center;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: var(--primary-color);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* تنسيق عناصر الإدخال */
+input, select, textarea {
+    width: 100%;
+    padding: 9px;
+    margin: 8px 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 19px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0px 0px 5px var(--secondary-color);
+}
+
+/* تنسيق الزر */
+button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #106b92b4;
+    color: var(--text-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background: #06394f;
+    color: white;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق رسالة الخطأ */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+    display: none;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input, select, textarea, button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+
+/* دعم الشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 600px;
+    }
+}

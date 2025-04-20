@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/people_login.css">
+<title>Tech Talent Page Login</title>
+</head>
+<body dir="rtl">    
+    <!-- تسجيل الدخول -->
+<div class="container">
+<div class="image-container">
+    <img src="../img/freepik__the-style-is-candid-image-photography-with-natural__73945.png" alt="Connect Platform Logo">
+</div>
+<div class="form-container">
+<h1 class="text">تسجيل الدخول الي حسابك</h1>
+    <form action="../html/people_dashboard.html">
+        <!-- <label for="mail" class="lab">البريد الإلكتروني</label> -->
+<input type="email" id="mail" class="inp" placeholder="البريد الإلكتروني" required name="email-log">
+<p id="error-mail" class="error-message" style="display: none; color: red;"></p>
+
+<!-- <label for="password" class="lab">كلمة المرور</label> -->
+<input type="password" id="password" class="inp" maxlength="8" placeholder="كلمة المرور" required name="pass-log">
+<p id="error-password" class="error-message" style="display: none; color: red;"></p>
+
+        <div class="forgot-password">
+            <a href="#" id="forgot-password-link">نسيت كلمة السر؟</a>
+        </div>
+        <button type="submit" class="btn" onclick="validateLoginForm(); return false;">تسجيل الدخول</button>
+
+    </form>
+    <div class="links">
+        <p>ليس لديك حساب؟ <a href="people_createAccount.html">إنشاء حساب جديد</a></p>
+    </div>
+</div>
+</div>
+<!-- نسيت كلمه المرور -->
+<div id="forgot-password-Popup" class="Popup">
+    <div class="Popup-content">
+        <span class="close">&times;</span>
+        <h2>اعاده ضبط كلمه المرور</h2>
+        <label for="email" class="lab" >البريد الإلكتروني</label>
+        <input type="email" id="email" class="inp" placeholder="البريد الإلكتروني" required name="email-res">
+        <button type="submit" class="btn">ارسال الرمز</button>
+    </div>
+</div>
+
+<script src="../js/people_login.js"></script>
+</body>
+</html>

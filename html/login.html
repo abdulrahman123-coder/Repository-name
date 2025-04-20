@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/login.css">
+    <title>تسجيل الدخول</title>
+</head>
+<body d>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="text">تسجيل الدخول</div>
+                <input type="email" id="company_login_email" class="inp" placeholder="أدخل بريدك الإلكتروني" required>
+                <input type="password" id="company_login_password" class="inp" placeholder="أدخل كلمة المرور" required>
+                <div class="forgot-password">
+                    <a href="#" id="forgot-password-link">نسيت كلمة السر؟</a>
+                </div>
+                <button type="submit" class="btn"  onclick="login()">دخول</button>
+    
+                <div class="links">
+                    <p>ليس لديك حساب؟ <a href="../html/createaccount.html">سجّل الآن</a></p>
+                </div>
+        </div>
+        
+        <div class="image-container">
+            <img src="../img/com_go_to_card.jpg" alt="Login Image">
+        </div>
+    </div>
+    
+<script src="../js/login.js"></script>
+</body>
+</html>
+

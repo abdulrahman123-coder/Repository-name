@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Talent Page Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/Tech Talent Page Cards.css">
+</head>
+<body dir="rtl">    
+<div class="container">
+    <div>
+        <img src="../img/tech(1).png" alt="Logo" width="200px" height="100px" style="margin-bottom: 40px; margin-left: 50px;">
+    </div>
+    <div class="filters">
+        <select id="job" required class="inp" onchange="filterCards()">
+            <option value="">اختر المهنة</option>
+            <option value="صيانه حاسب">صيانه حاسب</option>
+            <option value="برامج حاسب">برامج حاسب</option>
+            <option value="جريفك">جريفك</option>
+            <option value="معدات كهربيه">معدات كهربيه</option>
+            <option value="معدات الكترونيه">معدات الكترونيه</option>
+            <option value="توصيلات كهربيه">توصيلات كهربيه</option>
+            <option value="تبريد و تكيف">تبريد و تكيف</option>
+            <option value="هيدرولك">هيدرولك</option>
+            <option value="CNC">CNC</option>
+            <option value="ميكاترونيكس">ميكاترونيكس</option>
+            <option value="كيمياء صناعيه">كيمياء صناعيه</option>
+            <option value="كيمياء تحليليه">كيمياء تحليليه</option>
+        </select>
+
+        <select id="state" required class="inp"  onchange="filterCards()">
+            <option value="">اختر المحافظة</option>
+            <option value="القاهرة">القاهرة</option>
+            <option value="الجيزة">الجيزة</option>
+            <option value="الإسكندرية">الإسكندرية</option>
+            <option value="الدقهلية">الدقهلية</option>
+            <option value="البحر الأحمر">البحر الأحمر</option>
+            <option value="البحيرة">البحيرة</option>
+            <option value="الفيوم">الفيوم</option>
+            <option value="الغربية">الغربية</option>
+            <option value="الإسماعيلية">الإسماعيلية</option>
+            <option value="كفر الشيخ">كفر الشيخ</option>
+            <option value="مطروح">مطروح</option>
+            <option value="المنوفية">المنوفية</option>
+            <option value="المنيا">المنيا</option>
+            <option value="الوادي الجديد">الوادي الجديد</option>
+            <option value="الشرقية">الشرقية</option>
+            <option value="شمال سيناء">شمال سيناء</option>
+            <option value="جنوب سيناء">جنوب سيناء</option>
+            <option value="سوهاج">سوهاج</option>
+            <option value="قنا">قنا</option>
+            <option value="القليوبية">القليوبية</option>
+            <option value="الأقصر">الأقصر</option>
+            <option value="أسوان">أسوان</option>
+            <option value="أسيوط">أسيوط</option>
+            <option value="بني سويف">بني سويف</option>
+            <option value="بورسعيد">بورسعيد</option>
+            <option value="دمياط">دمياط</option>
+            <option value="السويس">السويس</option>
+            <option value="الشرقية">الشرقية</option>
+        </select>
+
+        <select id="experience" required class="inp"  onchange="filterCards()">
+            <option value="">اختر الخبرة</option>
+            <option value="حديث التخرج">حديث التخرج</option>
+            <option value="خبرة 3 سنوات">خبرة 3 سنوات</option>
+            <option value="خبرة 5 سنوات">خبرة 5 سنوات</option>
+            <option value="خبرة من 5 إلى 10 سنوات">خبرة من 5 إلى 10 سنوات</option>
+            <option value="خبرة أكثر من 10 سنوات">خبرة أكثر من 10 سنوات</option>
+        </select>
+
+        <select id="shiftOptions" required class="inp"  onchange="filterCards()">
+            <option value="">اختر الوردية</option>
+            <option value="وردية صباحية">وردية صباحية</option>
+            <option value="وردية مسائية">وردية مسائية</option>
+            <option value="وردية مختلطة">وردية مختلطة</option>
+        </select>
+
+                <select id="salarymonth"  required class="inp"  onchange="filterCards()">
+                    <option value="">الرتب المتوقع خلال الشهر</option>
+                    <option value="من 1000 إلى 3000 جنيه">من 1000 إلى 3000 جنيه</option>
+                    <option value="من 3000 إلى 5000 جنيه">من 3000 إلى 5000 جنيه</option>
+                    <option value="من 5000 إلى 7000 جنيه">من 5000 إلى 7000 جنيه</option>
+                    <option value="من 7000 إلى 10000 جنيه">من 7000 إلى 10000 جنيه</option>
+                </select>
+
+                <select id="salaryday"  required class="inp"  onchange="filterCards()">
+                    <option value="">الرتب المتوقع خلال اليوم</option>
+                    <option value="من 50 إلى 100 جنيه">من 50 إلى 100 جنيه</option>
+                    <option value="من 150 إلى 200 جنيه">من 150 إلى 200 جنيه</option>
+                    <option value="من 250 إلى 300 جنيه">من 250 إلى 300 جنيه</option>
+                    <option value="من 350 إلى 400 جنيه">من 350 إلى 400 جنيه</option>
+                    <option value="من 450 إلى 500 جنيه">من 450 إلى 500 جنيه</option>
+                    <option value="من 550 إلى 600 جنيه">من 550 إلى 600 جنيه</option>
+                </select>
+
+    </div>
+</div>
+<section class="technicians" id="technicians">
+</section>
+
+<div id="ratingModal" class="rating-modal">
+    <div class="rating-box">
+        <div class="rating-header">
+            <h3 class="company-only people-only">أضف تقييمك</h3>
+            <button id="close-rating" class="close-btn">&times;</button>
+        </div>
+
+        <div class="stars" id="rating-stars">
+            <span class="star" data-value="1">&#9734;</span>
+            <span class="star" data-value="2">&#9734;</span>
+            <span class="star" data-value="3">&#9734;</span>
+            <span class="star" data-value="4">&#9734;</span>
+            <span class="star" data-value="5">&#9734;</span>
+        </div>
+
+        <textarea id="rating-comment" placeholder="أضف تعليقك هنا"></textarea>
+
+        <div class="rating-actions">
+            <button id="submit-rating" class="btn primary">إرسال التقييم</button>
+            <button id="cancel-rating" class="btn secondary">إلغاء</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/Tech Talent Page Cards.js"></script>
+</body>
+</html>

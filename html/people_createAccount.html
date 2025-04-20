@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/people_createAccount.css">
+<title>Tech Talent Page Create Acount</title>
+</head>
+<body dir="rtl">
+
+    <div class="container">
+    <h1 class="text">بيانات الشخصية</h1>
+    <form id="step1Form">
+        <!-- <label for="name" class="lab">الاسم الاول</label> -->
+        <input type="text" id="name" placeholder="برجاء ادخال الاسم بل كامل"  class = "inp" >
+
+
+        <!-- <label for="phone" class="lab">رقم الهاتف</label> -->
+        <input type="tel" id="phone" maxlength="11" placeholder="برجاء ادخال رقم الهاتف"  class = "inp"  required  style="direction: rtl;">
+<span id="phoneError" class="error-message"></span>
+
+        <!-- <label for="email"  class="lab">البريد الإلكتروني</label> -->
+        <input type="email" id="email" placeholder="البريد الإلكتروني"  class="inp" required> 
+<span id="emailError" class="error-message"></span>
+
+        <!-- <label for="password" class="lab">كلمة المرور</label> -->
+        <input type="password" id="password"  placeholder="برجاء ادخال كلمه السر"  class = "inp" required maxlength="12">
+        <span id="passwordError" class="error-message"></span>
+
+        <!-- <label for="confirmPassword">تأكيد كلمة المرور:</label> -->
+        <input type="password" id="confirmPassword" placeholder="أعد إدخال كلمة المرور" class = "inp"  maxlength="12">
+<span id="confirmPasswordError" class="error-message"></span>
+
+        <!-- <label for="state" class="lab">المحافظة</label> -->
+        <select id="state" required class="inp">
+            <option value="" >اختر المحافظة</option>
+        </select>
+        
+        <!-- <label for="city" class="lab">المركز</label> -->
+        <select id="city"  required class="inp">
+            <option value="">اختر المركز</option>
+        </select>
+        <span id="error" class="error-message"></span>
+        <button type="button" class="btn" onclick="savePeopleData()">تسجيل</button>
+
+
+        <div class="links">
+            <p>لديك حساب بل فعل ؟<a href="people_logIn.html">اضغط هنا</a></p>
+        </div>
+
+    </form>
+</div>
+<script src="../js/people_creatAccount.js"></script>
+</body>
+</html>
